@@ -1,5 +1,5 @@
 # files
-mini_sparkify_event_data.json
+*.json
 
 
 # Byte-compiled / optimized / DLL files
