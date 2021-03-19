@@ -6,6 +6,8 @@ This project is part of the Data Scientist Nanodegree program from Udacity, incl
 - Load large datasets into Spark and manipulate them using Spark SQL and Spark Dataframes
 - Use the machine learning APIs within Spark ML to build and tune models
 
+The project is summarized in this accompanying [post](https://www.linkedin.com/pulse/predicting-churn-rates-spark-yizhen-jeremy-dai).
+
 ## Table of Contents
 1. [Description](#description)
 2. [Files in the repository](#files)
@@ -13,13 +15,7 @@ This project is part of the Data Scientist Nanodegree program from Udacity, incl
 
 <a name="descripton"></a>
 ## Description
-The full dataset is 12GB. You can choose to deploy a Spark cluster on the cloud using AWS or IBM Cloud to analyze a larger amount of data. Currently the full 12GB dataset is available if you use AWS. If you use IBM, you can download a medium sized dataset to upload to your cluster.
-
-Details on how to do this using AWS or IBM Cloud are included in the last lesson of the Extracurricular Spark Course content linked above. Note that this part is optional, and you will not receive credits to fund your deployment. You can do the IBM portion for free. Using AWS will cost you around $30 if you run a cluster up for a week with the settings we provide.
-
-Once you've built your model, either in the classroom workspace or in the cloud with AWS or IBM, download your notebook and complete the remaining components of your Data Scientist Capstone project, including thorough documentation in a README file in your Github repository, as well as a web app or blog post explaining the technical details of your project. Be sure to review the Project Rubric thoroughly before submitting your project.
-
-Variables:
+We deploy a Spark cluster on the cloud using IBM Cloud to analyze the large amount of data. The data variables are:
  |-- artist: string (the name of artist)
  |-- auth: string (the status of log in)
  |-- firstName: string (the first name of the user)
@@ -39,17 +35,32 @@ Variables:
  |-- userAgent: string (related to the data request)
  |-- userId: string (The Id of the user)
 
+### Problem Statement
+The project aims to predict if a user would leave the music streaming app (i.e. churn) based on the behaviour data. Being able to predict the churn can enable the music app to provide more stimuli to retain the user, such as a discount.
 
- The project is summarized in this accompanying [post](https://www.linkedin.com/pulse/predicting-churn-rates-spark-yizhen-jeremy-dai).
+### Metrics
+This task falls into the category of the classification problem. Since the churned users are a fairly small subset, the F-1 score is used as the metric to optimize our classifier.
 
 <a name="files"></a>
-## Files in the repository
+## Files in the Repository
 Using IBM Watson Studio
 |- Churn with Spark using IBM cluster.ipynb # Python notebook file of codes for IBM studio
 |- Churn with Spark using IBM cluster.html # the html version of the above notebook
 Sparkify Project Workspace.ipynb # the exploring on a small sub dataset
 figures.pptx # the slides with figures used for the blog
 README.md
+
+### Data Pre-processing
+- Handling missing values
+- Define churn
+
+### Feature Engineering
+- Visiting frequencies per day
+- Number of songs between visiting the home page
+- Average time spent per session
+- Percentage of time spent on different page types 
+- Gender
+- Whether the user has ever paid
 
 <a name="license"></a>
 ## License
