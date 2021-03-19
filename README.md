@@ -11,7 +11,8 @@ The project is summarized in this accompanying [post](https://www.linkedin.com/p
 ## Table of Contents
 1. [Description](#description)
 2. [Files in the repository](#files)
-3. [License](#license)
+3. [Process](#results)
+4. [License](#license)
 
 <a name="descripton"></a>
 ## Description
@@ -35,6 +36,13 @@ We deploy a Spark cluster on the cloud using IBM Cloud to analyze the large amou
  |-- userAgent: string (related to the data request)<br/>
  |-- userId: string (The Id of the user)
 
+ The libraries used for dependencies are
+- pyspark<br/>
+- pyspark.sql <br/>
+- pyspark.ml<br/>
+- datetime<br/>
+- pandas<br/>
+
 ### Problem Statement
 The project aims to predict if a user would leave the music streaming app (i.e. churn) based on the behaviour data. Being able to predict the churn can enable the music app to provide more stimuli to retain the user, such as a discount.
 
@@ -50,6 +58,8 @@ Sparkify Project Workspace.ipynb # the exploring on a small sub dataset<br/>
 figures.pptx # the slides with figures used for the blog<br/>
 README.md
 
+<a name="results"></a>
+## Results
 ### Data Pre-processing
 - Handling missing values
 - Define churn
@@ -61,6 +71,12 @@ README.md
 - Percentage of time spent on different page types 
 - Gender
 - Whether the user has ever paid
+
+### Results
+Logistic Regression is used as the classifer. The best performer in our case is lambda of 0.01 and alpha of 0.3, which indicates the overfitting is not a serious issue in our model and L2 regularization term plays a more important role than the L1 one.
+
+The features of Logistic Regression models are all standardized so their weight scale indicates their importance in the model. The most important feature is the frequency of visiting each page. Surprisingly, the number of songs as well as gender is set to zero in the model. 
+
 
 <a name="license"></a>
 ## License
