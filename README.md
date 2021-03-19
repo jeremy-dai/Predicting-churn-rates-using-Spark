@@ -15,24 +15,24 @@ The project is summarized in this accompanying [post](https://www.linkedin.com/p
 
 <a name="descripton"></a>
 ## Description
-We deploy a Spark cluster on the cloud using IBM Cloud to analyze the large amount of data. The data variables are:
- |-- artist: string (the name of artist)
- |-- auth: string (the status of log in)
- |-- firstName: string (the first name of the user)
- |-- gender: string (the gender of the user)
- |-- itemInSession: long (number of items in the session)
- |-- lastName: string (the last name of the user)
- |-- length: double (the duration of the song)
- |-- level: string (if the user is a paid one)
- |-- location: string (the location of the user)
- |-- method: string (the access method to the app)
- |-- page: string (the visited page of the app)
- |-- registration: long (the timestamp of user registration)
- |-- sessionId: long (the Id of the session)
- |-- song: string (the name of the song)
- |-- status: long (the code returned by the app)
- |-- ts: long (the current timestamp)
- |-- userAgent: string (related to the data request)
+We deploy a Spark cluster on the cloud using IBM Cloud to analyze the large amount of data. The data variables are:<br/>
+ |-- artist: string (the name of artist)<br/>
+ |-- auth: string (the status of log in)<br/>
+ |-- firstName: string (the first name of the user)<br/>
+ |-- gender: string (the gender of the user)<br/>
+ |-- itemInSession: long (number of items in the session)<br/>
+ |-- lastName: string (the last name of the user)<br/><br/>
+ |-- length: double (the duration of the song)<br/>
+ |-- level: string (if the user is a paid one)<br/>
+ |-- location: string (the location of the user)<br/>
+ |-- method: string (the access method to the app)<br/>
+ |-- page: string (the visited page of the app)<br/>
+ |-- registration: long (the timestamp of user registration)<br/>
+ |-- sessionId: long (the Id of the session)<br/>
+ |-- song: string (the name of the song)<br/>
+ |-- status: long (the code returned by the app)<br/>
+ |-- ts: long (the current timestamp)<br/>
+ |-- userAgent: string (related to the data request)<br/>
  |-- userId: string (The Id of the user)
 
 ### Problem Statement
@@ -43,11 +43,11 @@ This task falls into the category of the classification problem. Since the churn
 
 <a name="files"></a>
 ## Files in the Repository
-Using IBM Watson Studio
-|- Churn with Spark using IBM cluster.ipynb # Python notebook file of codes for IBM studio
-|- Churn with Spark using IBM cluster.html # the html version of the above notebook
-Sparkify Project Workspace.ipynb # the exploring on a small sub dataset
-figures.pptx # the slides with figures used for the blog
+Using IBM Watson Studio<br/>
+|- Churn with Spark using IBM cluster.ipynb # Python notebook file of codes for IBM studio<br/>
+|- Churn with Spark using IBM cluster.html # the html version of the above notebook<br/>
+Sparkify Project Workspace.ipynb # the exploring on a small sub dataset<br/>
+figures.pptx # the slides with figures used for the blog<br/>
 README.md
 
 ### Data Pre-processing
